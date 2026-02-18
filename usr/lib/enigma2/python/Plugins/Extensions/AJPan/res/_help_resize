@@ -1,0 +1,5 @@
+#Y#OK Button#W#
+Will resize the picture so that the result dimension is within the selected size.
+
+#Y#Blue Button#W#
+Will resize the picture so that the result dimension is exactly equal to the selected size (will stretch to fit the size).

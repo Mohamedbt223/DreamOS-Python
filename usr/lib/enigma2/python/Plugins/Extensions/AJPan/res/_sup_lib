@@ -1,0 +1,9 @@
+ar=ipk/deb
+bzip2=bz2 files
+ffmpeg=PIcons conversion + Some file types download
+Imaging=OSD-Screenshot + Convert picture to PIcon
+p7zip=7z files
+requests=Portal communication + IPTV Download
+unrar=rar files
+xz=deb packages
+zip=zip files

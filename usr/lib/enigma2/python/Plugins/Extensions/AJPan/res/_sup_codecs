@@ -1,0 +1,40 @@
+All languages (Unicode)	utf32,UTF-32BE,UTF-32LE,utf16,UTF-16BE,UTF-16LE,unicode-1-1-utf-7,UTF,utf8,cp65001,utf_8_sig
+Arabic	p720,IBM864,windows-1256,iso-8859-6,arabic
+Baltic languages	IBM775,windows-1257,iso-8859-4,latin4,iso-8859-13,latin7
+Bulgarian	IBM855,windows-1251,iso-8859-5,cyrillic,maccyrillic
+Byelorussian	IBM855,windows-1251,iso-8859-5,cyrillic,maccyrillic
+Canadian	IBM863
+Celtic languages	iso-8859-14,latin8
+Central and Eastern Europe	IBM852,windows-1250,iso-8859-2,latin2,maclatin2,maccentraleurope,mac_centeuro
+Chinese Simplified 	chinese,csiso58gb231280,euc-cn,euccn,eucgb2312-cn,gb2312-1980,gb2312-80,iso-ir-58,hzgb,hz-gb,hz-gb-2312,iso-8859-16,latin10
+Chinese Traditional	big5-tw,csbig5,big5-hkscs,hkscs,950,ms950
+Chinese Unified	cp936,ms936,gb18030-2000
+Danish	IBM865
+English	646,us-ascii,IBM037,IBM039,IBM437
+Esperanto	iso-8859-3,latin3
+German	IBM273,csIBM273
+Greek	cp737,CP-GR,IBM869,cp875,windows-1253,iso-8859-7,greek,greek8,macgreek
+Greek	iso-2022-jp-2
+Hebrew	EBCDIC-CP-HE,IBM424,cp856,IBM862,windows-1255,iso-8859-8,hebrew
+Icelandic	CP-IS,IBM861,maciceland
+Japanese	ms932,mskanji,ms-kanji,eucjp,ujis,u-jis,jisx0213,eucjis2004,eucjisx0213,iso2022jp,iso-2022-jp,iso-2022-jp-1,iso-2022-jp-2004,iso-2022-jp-3,iso-2022-jp-ext,csshiftjis,shiftjis,sjis,s_jis,shiftjis2004,sjis_2004,shiftjisx0213,s_jisx0213
+Japanese	iso-2022-jp-2
+Kazakh	csptcp154,pt154,cp154,cyrillic-asian,kz_1048,strk1048_2002,rk1048
+Korean	ms949,uhc,euckr,korean,ksc5601,ks_c-5601-1987,ks_x-1001,iso-2022-kr,cp1361,ms1361
+Korean	iso-2022-jp-2
+Macedonian	IBM855,windows-1251,iso-8859-5,cyrillic,maccyrillic
+Maltese	iso-8859-3,latin3
+Nordic languages	iso-8859-10,latin6
+Norwegian	IBM865
+Portuguese	IBM860
+Russian	IBM855,windows-1251,iso-8859-5,cyrillic,maccyrillic
+Russian	IBM866,koi8_r,windows-1251,iso-8859-5,IBM855,IBM866,maccyrillic
+Simplified Chinese	iso-2022-jp-2
+Tajik	koi8_t
+Thai	cp874,iso-8859-11,thai
+Turkish	IBM857,ibm1026,windows-1254,iso-8859-9,latin5,macturkish
+Ukrainian	koi8_u,ibm1125,cp866u,ruscii
+Urdu	cp1006
+Vietnamese	windows-1258
+Western Europe	EBCDIC-CP-BE,EBCDIC-CP-CH,IBM500,IBM850,IBM858,ibm1140,windows-1252,iso8859-1,8859,cp819,latin,latin1,iso-8859-15,latin9,macroman,macintosh
+Western Europe	iso-2022-jp-2

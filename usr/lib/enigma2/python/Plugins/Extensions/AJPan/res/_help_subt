@@ -1,0 +1,36 @@
+-------------------------------------------------------------------
+#C#In Subtitle Mode
+-------------------------------------------------------------------
+#Y#Left#W#	Open Subtitle Line changer
+#Y#Right#W#	Open Subtitle Line changer
+
+#Y#Blue#W#	Pick a subtitle line (to change current line)
+
+#Y#Info#W#	Show information about current subtitle file/timing
+
+#Y#OK#W#	Exit Subtitle
+#Y#Exit#W#	Exit Subtitle
+
+-------------------------------------------------------------------
+#C#In Settings Window
+-------------------------------------------------------------------
+
+#Y#OK#W#	Show list of values to pick from
+#Y#0#W#	Reset the selected setting item to its default value
+
+#Y#Up#W#	Change setting item to previous value
+#Y#Down#W#	Change setting item to next value
+
+#Y#<#W#	Change setting item to first value
+#Y#>#W#	Change setting item to last value
+
+#Y#Red#W#	Reset all settings to default
+#Y#Green#W#	Save settings
+#Y#Yellow#W#	Reset delay to '0'
+#Y#Blue#W#	Pick a subtitle line (to change current line)
+
+#Y#Info#W#	Show information about current subtitle file/timing
+
+#Y#Menu#W#	Open Subtitle Settings
+	Show More Options
+

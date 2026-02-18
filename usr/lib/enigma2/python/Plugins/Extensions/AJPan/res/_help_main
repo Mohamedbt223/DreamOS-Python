@@ -1,0 +1,25 @@
+#Y#1#W#	File Manager
+#Y#2#W#	IPTV
+#Y#3#W#	Movies Browser
+#Y#4#W#	Services/Channels
+#Y#5#W#	Bouquet Editor
+#Y#6#W#	PIcons
+#Y#7#W#	EPG
+#Y#8#W#	Terminal
+#Y#9#W#	SoftCam
+#Y#<#W#	Plugins
+#Y#>#W#	Backup & Restore
+
+#Y#0000#W#	Typing 0000 in the Main page will enable the following:
+	#G#1- File Manage commands are enabled on system directories.
+	#G#2- Portal Live Category "All" will be listed in categories.
+	#G#3- AJPanel "Info" will show bouquet file name.
+
+#Y#OK#W#	Select the option
+#Y#Info#W#	Change Log
+#Y#Menu#W#	Main menu options
+
+#Y#Red#W#	Exit AJPanel
+#Y#Green#W#	Settings
+#Y#Yellow#W#	Device Information
+#Y#Blue#W#	Colors and Fonts

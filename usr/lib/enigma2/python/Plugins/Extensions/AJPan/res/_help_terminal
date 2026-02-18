@@ -1,0 +1,55 @@
+#P#RCU Keys:#W#
+
+#Y#Menu#W#	User's Custom Commands Table
+#Y#OK#W#	Command History Table
+
+#Y#<#W#	Decrease Font Size
+#Y#>#W#	Increase Font Size
+#Y#0#W#	Reset Font Size (to default)
+
+#Y#Green#W#	Minimize window to top left corner
+#Y#Yellow#W#	Terminal Options/Settings
+#Y#Blue#W#	Open Keyboard to enter new command
+
+#Y#Up#W#	Page Up
+#Y#Down#W#	Page Down
+
+#Y#Left#W#	Page Up
+#Y#Right#W#	Page Down
+
+#Y#Ch Up#W#	Go to First Page
+#Y#Ch Down#W#	Go to Last Page
+
+#Y#Exit#W#	Exit Terminal
+
+#Y#Info#W#	This Window
+
+#G#-------------------------------------------------------------------#W#
+#P#Terminal Custom Commands:#W#
+- You can divide your commands in groups (each in a file).
+- You can divide your commands in groups (same file with different colors).
+- Commands file name must start with "#Gn#ajpanel_cmd#W#" or "#Gn#linuxcommands#W#".
+- The files will be found automatically by the panel if saved in the backup direcory.
+- File names examples: "ajpanel_cmd-Admin-Commands" , "ajpanel_cmd_07-10-2023.txt".
+- Empty lines will not be displayed.
+- Lines that start with symbols are considered comments (except the char "_").
+- Comments can be added at the end of command line. E.g. : ls # list files.
+- Empty lines will not be displayed in the Terminal.
+- Lines that start with symbols are considered comments (except the char "_").
+- Comments can be added at the end of command line. E.g. : ls # list files.
+
+#G#-------------------------------------------------------------------#W#
+#P#Commands Coloring:#W#
+- The Terminal can change the default colors based on user's custom colors.
+- Syntax:	#Gn#[foreground_color1, background_color2]#W#
+- Colors:	black, red, green, blue, yellow, cyan, purple, grey, gray, white.
+- RGB:	RRGGBB or AARRGGBB (Alpha_channel, Red, Green, Blue).
+ 	E.g. : 00FF8000 (Opaque Orange), 55FFFF00 (Transparent Yellow).
+- Colors can be added at beginnig of line (or at the end after "#").
+- Examples:
+ #C#ls  #[red,blue]#W#	   Show "ls" in Green (on Blue backround).
+ #C#[red,blue] ls#W#	   Show "ls" in Green (on Blue backround).
+ #C#[00FFFF00] ls#W#	   Show "ls" in Yellow (on default Terminal backround).
+ #C#[, blue] ls#W#	   Show "ls" in default Terminal forecround color (on Blue backround).
+ #C#[red, yellow]#W#	   With no command line = change colors for all next lines.
+ #C#[ ]#W#	   Reset the colors for next lines to Terminal defaul colors.

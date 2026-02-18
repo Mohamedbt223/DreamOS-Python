@@ -1,0 +1,102 @@
+# uncompyle6 version 3.9.3
+# Python bytecode version base 2.7 (62211)
+# Decompiled from: Python 3.12.3 (main, Jan 22 2026, 20:57:42) [GCC 13.3.0]
+# Embedded file name: /usr/lib/enigma2/python/Plugins/Extensions/WebBouquetEditor/WebComponents/Sources/SatellitesList.py
+# Compiled at: 2025-09-18 23:33:38
+from Components.Sources.Source import Source
+from Screens.ChannelSelection import service_types_tv, service_types_radio, FLAG_SERVICE_NEW_FOUND, MODE_TV, MODE_RADIO
+from enigma import eServiceReference, eServiceCenter
+from Tools.HardwareInfo import HardwareInfo
+service_types_tv_hd = '1:7:1:0:0:0:0:0:0:0:(type == 17) || (type == 25) || (type == 134) || (type == 195)'
+
+class SatellitesList(Source):
+    FETCH = 0
+
+    def __init__(self, func=FETCH):
+        Source.__init__(self)
+        self.func = func
+        self.xml = ''
+        self.mode = MODE_TV
+        return
+
+    def handleCommand(self, param):
+        self.mode = int(param)
+        return
+
+    def do_func(self):
+        if self.func == self.FETCH:
+            func = self.buildList
+        else:
+            func = self.buildList
+        return func(self.mode)
+
+    def buildList(self, mode):
+        print '[WebComponents.SatellitesList] buildList with param = %d' % mode
+        if mode == MODE_TV:
+            s_type = service_types_tv
+        else:
+            s_type = service_types_radio
+        refstr = '%s FROM SATELLITES ORDER BY satellitePosition' % s_type
+        ref = eServiceReference(refstr)
+        serviceHandler = eServiceCenter.getInstance()
+        counter = i = 0
+        if HardwareInfo().get_device_name() != 'dm7025' and mode == MODE_TV:
+            counter = 1
+        while i <= counter:
+            if i:
+                refstr = '%s FROM SATELLITES ORDER BY satellitePosition' % service_types_tv_hd
+                ref = eServiceReference(refstr)
+            servicelist = serviceHandler.list(ref)
+            if servicelist is not None:
+                while True:
+                    service = servicelist.getNext()
+                    if not service.valid():
+                        break
+                    unsigned_orbpos = service.getUnsignedData(4) >> 16
+                    orbpos = service.getData(4) >> 16
+                    if orbpos < 0:
+                        orbpos += 3600
+                    if service.getPath().find('FROM PROVIDER') != -1:
+                        continue
+                    elif service.getPath().find('flags == %d' % FLAG_SERVICE_NEW_FOUND) != -1:
+                        service_type = _('New')
+                    elif service.getPath().find('numCAIDs') != -1:
+                        service_type = _('Services') + ' FTA'
+                    else:
+                        service_type = _('Services')
+                    try:
+                        service_name = str(nimmanager.getSatDescription(orbpos))
+                    except:
+                        if unsigned_orbpos == 65535:
+                            service_name = _('Cable')
+                        elif unsigned_orbpos == 61166:
+                            service_name = _('Terrestrial')
+                        else:
+                            if orbpos > 1800:
+                                orbpos = 3600 - orbpos
+                                h = _('W')
+                            else:
+                                h = _('E')
+                            service_name = '%d.%d %s' % (orbpos / 10, orbpos % 10, h)
+
+                    if i:
+                        service_type = 'HD %s' % service_type
+                    print 'service name'
+                    print service.getName()
+                    service.setName('%s - %s' % (service_name, service_type))
+                    self.xml += '\t\t<e2service>\n'
+                    self.xml += '\t\t<e2servicereference>%s</e2servicereference>\n\t\t<e2servicename>%s</e2servicename>\n' % (self.filterXML(service.toString()), self.filterXML(service.getName()))
+                    self.xml += '\t\t</e2service>\n'
+
+            i += 1
+
+        return self.xml
+
+    def filterXML(self, item):
+        item = item.replace('&', '&amp;').replace('<', '&lt;').replace('"', '&quot;').replace('>', '&gt;').replace('\x86', '').replace('\x87', '')
+        return item
+
+    text = property(do_func)
+
+
+return

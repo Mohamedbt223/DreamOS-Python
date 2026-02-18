@@ -1,0 +1,40 @@
+#Y#Menu#W#	File/directory related options
+
+#Y#OK#W#	- Go to parent directory (if at top directory)
+	- Enter directory (if pointer is on a directory)
+	- View file (if pointer is on a text file)
+	- Show file options (if pointer is on a non-text file)
+	- Select file/directory (if in Multi-Select mode)
+
+#Y#cancel#W#	Exit or Go to parent directory (depends on Settings)
+
+#Y#Red#W#	Exit
+#Y#Green#W#	Select file/directory (in picker mode)
+#Y#Yellow#W#	General options
+#Y#Blue#W#	Directory Bookmarks
+
+#Y#FAV#W#	Save selected/current directory as a start-up directory
+
+#Y#Info#W#	Properties of selected File/directory
+#Y#EPG#W#	Same as "Info" Button (on some RCUs).
+#Y#Help#W#	Same as "Info" Button (e.g. for Vu+)
+
+#Y#Back#W#	Go to parent directory
+#Y#Recall#W#	Same as "Back" Button
+
+#Y#Page-Up#W#	- Go to parent directory
+	- Toggle selection and move pointer to next row (in Multi-Select mode)
+
+#Y#Page-Down#W#	- Enter directory (if pointer is on a directory)
+	- Toggle selection and move pointer to previous row (in Multi-Select mode)
+
+#Y#CH-Up#W#	Same as "Page-Up" Button
+#Y#CH-Down#W#	Same as "Page-Down" Button
+
+#Y#<#W#	Move pointer to top of list
+#Y#>#W#	Move pointer to end of list
+
+#Y#Left#W#	Go up one page
+#Y#Right#W#	Go down one page
+
+#Y#0 - 9#W#	Type the first character of name to move the pointer to

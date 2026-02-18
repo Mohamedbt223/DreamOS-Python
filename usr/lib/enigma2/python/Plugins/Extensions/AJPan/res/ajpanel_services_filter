@@ -1,0 +1,30 @@
+# Service Filter File ("ajpanel_services_filter"):
+# - The file  is used to store yor favourite words.
+# - It is automatically copied to your Backup directory when you launch the filter.
+# - You can modify it within the Filter (Yellow Button) or use any text editor.
+#
+# Rules:
+# - To find words, create line with a word (or list of words separate by commas).
+# - Searching is case-insensitive (capital and small letters or a mix of both).
+# - Starting the line with "^" will order the search for names starting with the words.
+# - To find names that start with a word, add "^" as the first letter in line.
+# - Comments are ignored (any text starting with "#" is ignored).
+# - Empty lines are ignored.
+#
+# Examples:
+# Sport			# Find names that contain the word "sport".
+# sport, kass		# Find names that contain any of the words "sport" and "kass".
+# ^k				# Find names that start with the letter "K" (or "k").
+# ^sport,beIN		# Find names that start with the words "sport" or "beIN".
+
+Sport, Motor, Kass, Golf, Fotboll, ESP	# Sports
+Edu, Doc, Dok, Kult, cult, Earth, Anim, Planet, Geo, Histor, Discovery	# Educational
+Movie, Cine, Drama
+Toon, Kids, Bambini, Nick, Disney, Baby	# Kids
+News, Notizie
+Food
+Test
+HD
+4K, UHD, HEVC
+^,OSN
+osn

@@ -1,0 +1,28 @@
+REQ1:Package: enigma2-plugin-extensions-xx1
+REQ1:Version: v1.0
+REQ1:Description: xx2
+REQ1:Maintainer: xx2
+OPT1:Architecture: all
+OPT1:Priority: optional
+OPT1:Section: base
+OPT2:License: none
+OPT2:Source: none
+OPT2:Essential: no
+OPT2:Origin:
+OPT2:Bugs: url
+OPT2:Homepage: url
+OPT2:Tag:
+OPT2:Multi-Arch: allowed
+OPT2:Subarchitecture: all
+OPT2:Kernel-Version:
+OPT2:Installer-Menu-Item:
+OPT2:Breaks:
+OPT2:Conflicts:
+OPT2:Depends:
+OPT2:Enhances:
+OPT2:Pre-Depends:
+OPT2:Provides:
+OPT2:Recommends:
+OPT2:Replaces:
+OPT2:Suggests:
+OPT2:Built-Using:

@@ -1,0 +1,17 @@
+#Y#Service Filter File ("#C#ajpanel_services_filter#Y#"):
+#W#- The file  is used to store yor favourite words.
+- It is automatically copied to your Backup directory when you launch the filter.
+- You can modify it within the Filter (Yellow Button) or use any text editor.
+
+#Y#Rules:#W#
+- To find words, create line with a word (or list of words separate by commas).
+- Searching is case-insensitive (capital and small letters or a mix of both).
+- To find names that start with a word, add "^" as the first letter in line.
+- Comments are ignored (any text starting with "#" is ignored).
+- Empty lines are ignored.
+
+#Y#Examples:
+#W#Sport	#G## Find names that contain the word "sport".
+#W#sport, kass	#G## Find names that contain any of the words "sport" and "kass".
+#W#^k	#G## Find names that start with the letter "K" (or "k").
+#W#^sport,beIN	#G## Find names that start with the words "sport" or "beIN".

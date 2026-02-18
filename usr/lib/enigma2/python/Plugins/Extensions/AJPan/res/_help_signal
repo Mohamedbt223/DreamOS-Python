@@ -1,0 +1,19 @@
+#Y#Left#W#	Move window left
+#Y#Right#W#	Move window right
+#Y#Up#W#	Move window up
+#Y#Down#W#	Move window down
+#Y#1 - 9#W#	Move window to position of keys 0-9
+
+#Y#<#W#	Decrease window size
+#Y#>#W#	Increase window size
+
+#Y#CH-UP#W#	Zap Down
+#Y#CH-DOWN#W#	Zap Up
+
+#Y#Info#W#	Show Current Channel Information
+#Y#EPG#W#	Show Current Channel Information
+#Y#Help#W#	Show Current Channel Information
+
+#Y#OK#W#	Exit Signal Monitor
+#Y#Red#W#	Exit Signal Monitor
+#Y#Exit#W#	Exit Signal Monitor

@@ -1,0 +1,9 @@
+service ssh
+{
+	socket_type = stream
+	flags = IPv6
+	user = root
+	server = /usr/sbin/dropbear
+	server_args = -i -B
+	wait = no
+}

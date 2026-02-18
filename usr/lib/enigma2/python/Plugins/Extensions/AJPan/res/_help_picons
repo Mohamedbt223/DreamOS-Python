@@ -1,0 +1,28 @@
+#Y#Left#W#	Moves cursor Left
+#Y#Right#W#	Moves cursor Right
+#Y#Up#W#	Moves cursor Up
+#Y#Down#W#	Moves cursor Down
+
+#Y#<#W#	Page Up
+#Y#>#W#	Page Down
+#Y#0#W#	Jump to first/last item
+
+#Y#CH-UP#W#	Zap Down
+#Y#CH-DOWN#W#	Zap Up
+
+#Y#OK#W#	Zap to channel that uses the selected PIcon
+	#G#Works only if the selected PIcon is attached to a channel
+
+#Y#Green#W#	Jump to the PIcon used by current playing channel
+	#G#Works only if current playing channel has a PIcon
+
+#Y#Yellow#W#	Page options (sort, find,  Jump to first/last page)
+
+#Y#Blue#W#	Filter PIcons List
+
+#Y#Info#W#	Information about selected PIcon
+#Y#Help#W#	= Info (e.g. for Vu+)
+
+#Y#Menu#W#	PIcons Tools
+
+#Y#Exit#W#	Exit PIcon Manager

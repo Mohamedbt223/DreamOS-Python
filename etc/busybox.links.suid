@@ -1,0 +1,8 @@
+/bin/ping
+/bin/ping6
+/usr/bin/crontab
+/bin/login
+/usr/bin/passwd
+/bin/su
+/usr/bin/traceroute
+/usr/bin/traceroute6

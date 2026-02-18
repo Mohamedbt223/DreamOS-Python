@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+###############################################################################################################
+###  Menu File																								###
+###############################################################################################################
+
+	- The main menu file name must be "ajpanel_menu.xml".
+	- Other menu files must be in the format "ajpanel_menu_xxx.xml"	(must start with "ajpanel_menu")
+	- Menu files can be imported to xml file with 2 methods:
+		1- Using the Menu option "Insert Menu XML File" (from the Custom Menu).
+		2- Manually (by editing the Custom Menu file).
+			.. Menu files can be a the xml file name only or full path of xml file.
+			.. If full directory path is not used, AJPanel will assume that file is in your backup directory.
+	- Note:
+		Once a new xml file is imported, its related pictures directory can be fixed with the option "Change Pictures Path".
+
+###############################################################################################################
+###  Menu Attributes																						###
+###############################################################################################################
+
+	==============================================================================================
+	General Attributes (for List and Grid Menus)
+	==============================================================================================
+
+		Attribute			Usage							Remarks					Default Value
+		...............		..............................	....................	..............................................
+		mode				List or Grid Menu				list/grid/grid1			list (see Menu Mode)
+		title				Menu item title					Mandatory				No default value (must be set by user)
+		info				Menu item brief description		Any text				Default is title text
+		picpath				Full path for picture files		See Picture Files Path	See Picture Files Path
+		width				Menu width						Range = See Menu Mode	800  (see Menu Mode)
+		height				Menu height 					Range = See Menu Mode	1000 (see Menu Mode)
+		fg					Menu text color					Format = See Colors		"#00ffffff"
+		bg					Menu background color			Color/jpg/png/Base64	"#0c001122" ... See : See Colors &  Picture Files Path
+		title_fg			Title text color				Format = See Colors		"#00ffffaa"
+		title_bg			Title background color			Format = See Colors		"#11000011"
+		title_font_size		Title font						Range  = 20 - 50		50
+		icon				Path of menu item icon			See Icons Files			Default icons are set by the panel.
+		ask					Confirmation question			See Confirmation		No confirmation question
+
+	==============================================================================================
+	List-Menu Attributes
+	==============================================================================================
+
+		Attribute			Usage							Remarks					Default Value
+		...............		..............................	....................	..............................................
+		font_size			Menu font						Range  = 10 - 50		30
+		line_gap			Menu line top/bottom spacing	Range  = 0 - 100		0
+		align_items			Menu text alignment				left/center/reight		"left"
+		cursor_fg			Pointer text color				Format = See Colors		"#11ff8000"
+		cursor_bg			Pointer background color		Format = See Colors		"#11442244"
+
+	==============================================================================================
+	Grid-Menu Attributes
+	==============================================================================================
+
+		Attribute			Usage							Remarks					Default Value
+		...............		..............................	....................	..............................................
+		title1_fg			1st Info Line text color		Format = See Colors		Bright Green
+		title1_bg			1st Info Line background color	Format = See Colors		Title color (transparent if wallpaper is used)
+		title2_fg			2nd Info line text color		Format = See Colors		White
+		title2_bg			2nd Info line background		Format = See Colors		Title color (transparent if wallpaper is used)
+		num_fg				Item/Page number				Format = See Colors		Bright Grey
+		num_bg				Item/Page number				Format = See Colors		Title color (transparent if wallpaper is used)
+		shade				Items area Boxes background		jpg/png/Base64			No shade
+		cursor				Pointer background				Color/jpg/png/Base64	Default frame	... See Colors &  Picture Files Path
+		box_gap				Gap between boxes				Range  = 0 - 100		0
+
+###############################################################################################################
+###  Menu Mode																								###
+###############################################################################################################
+
+	- The default mode is a list-menu.
+
+	- List Mode Menu:
+		.. Width range  : 500 - 1920
+		.. Height range : 400 - 1080	... Height = maximum menu height (auto adjusted based to total items).
+
+	- Grid Mode Menu:
+		.. Width range  : 600 - 1920
+		.. Height range : 600 - 1080
+		.. Attributes that are ignored in grid mode : line_gap , font_size , cursor_fg , cursor_bg
+		.. If mode="grid"  : Small icons will be stretched to fill the picture height.
+		.. If mode="grid1" : Small icons will retain their size.
+		.. Default number of items in a page = 5 cols x 4 rows.
+			Columns limits	: 3 to 9
+			Rows limits		: 3 to 6
+		.. Rows/Cols can be changed as follows:
+			mode				Cols	Rows	Remarks
+			..........			...		....	.................................................................
+			mode="grid"			5		4		Grid Menu (small icons are will stretched to the picture area)
+			mode="grid1"		5		4		Grid Menu (small icons size is not changed)
+			mode="grid_6x3"		6		3		Grid Menu (small icons are will stretched to the picture area)
+			mode="grid1_8x5"	8		5		Grid Menu (small icons size is not changed)
+
+###############################################################################################################
+###  Colors																									###
+###############################################################################################################
+
+	Color format = "#AARRGGBB" (Alpha_channel, Red, Green, Blue).
+		.. Examples:
+			"#00FF8000" = Opaque Orange
+			"#55FFFF00" = Yellow with transparency
+
+###############################################################################################################
+###  Confirmation																							###
+###############################################################################################################
+
+	The panel can confirm with the user before taking any action.
+		.. If the attribute "ask" is not used, there will be no cofirmation.
+		.. I ask="" is added, the panel will confirm with the question "Continue ?" before taking action.
+		.. I ask="Are youe sure ?", the panel will confirm with this custom question before taking action.
+
+###############################################################################################################
+###  Menu Items Separator																					###
+###############################################################################################################
+
+	Separators are only valid for List Mode Menu and can be added with:
+
+	<separator/>
+
+###############################################################################################################
+###  Picture Files Path																						###
+###############################################################################################################
+
+	picpath:
+
+		For Main Menu element "ajp_menu", picpath can be set as a global directory path for all picture files (wallpaper/shade/cursor/icon).
+		So, if you set : picpath="/media/hdd/myPictures" , AJPanel will use this directory for pictures that have no directory.
+
+		Examples for picpath="/media/hdd/myPictures":
+			- Wallper:
+				- Example-1: bg="myWallpaper.jpg"				... Will be converted to : "/media/hdd/myPictures/myWallpaper.jpg"
+				- Example-2: bg="/media/usb/myWallpaper.jpg"	... Will be converted to : "/media/usb/myWallpaper.jpg"
+
+			- Icons:
+				- Example-1: icon="skin.png"					... Will be converted to : "/media/hdd/myPictures/skin.png"
+				- Example-2: icon="/media/etc/skin.png"			... Will be converted to : "/media/etc/skin.png".
+
+	Wallpaper:
+
+		For Main Menu element "ajp_menu", "bg" can be set to add a wallpaper as menu background. Picture files and colors can be used.
+		- Example-1 (picture file path)	: bg="/media/usb/myWallpaper.jpg"
+		- Example-2 (Base64 format)		: bg="data:image/png;base64,ibc..."
+		- Example-3 (Color)				: bg="#11003344"
+
+	Icons:
+
+		- Default icons are set by the panel.
+			.. For Channels	: If icon is not set, AJPanel will automatically assign a PIcon (if available).
+			.. For Movies	: If icon is not set, AJPanel will automatically assign a post (if exists in same movie directory).
+
+		- If custom icon is required, it can be added as follows:
+			Method-1: Add the full path of the icon file. 			... Example : icon="/media/myIcon.png"
+			Method-2: Add a Base64-picture string.		 			... Example : icon="data:image/png;base64,iVBORw0KGg..."
+
+###############################################################################################################
+###  Grid Menu Shade/Cursor																					###
+###############################################################################################################
+
+	Grid Menu Shade:
+
+		For Main Menu element "ajp_menu", "shade" can be set to change the background of menu items. Colors can be used too.
+		- Example-1 (picture file path)	: shade="/media/usb/myShadePic.png"
+		- Example-2 (Base64 format)		: shade="data:image/png;base64,ibc..."
+		- Example-3 (Color)				: shade="#11003344"
+
+		Note: To separate between item, add a shade picture with a transparent thin frame.
+
+	Grid Menu Cursor:
+
+		For Main Menu element "ajp_menu", "cursor" can be set to change the cursor (pointer).
+		- Example-1 (picture file path)	: shade="/media/usb/myPic.png"
+		- Example-2 (Base64 format)		: shade="data:image/png;base64,ibc..."
+
+###############################################################################################################
+###  Calling other custom menu xml file																		###
+###############################################################################################################
+
+	Other custom menus can be added in different ways:
+
+	Method-1: Add menu files from the options : "Insert Menu XML File".
+
+	Method-2: Add the file name without the full path (if the menu fileis in your backup path).
+				Example : <item name="External Menu">ajpanel_menu_ajp1.xml</item>
+
+	Method-3: Add the full path of the menu file as follows:
+				Example : <item name="External Menu">/media/hdd/ajpanel_menu_ajp1.xml</item>
+
+###############################################################################################################
+###  Using special characters (< > ' " &)																	###
+###############################################################################################################
+
+	........................................................................
+	Method-1: Replace the characters with their escape codes
+	........................................................................
+		Example:
+			<item name="Testing Special Characters (E.g. : &amp;)"> ls /home &amp;&amp; echo '' &amp;&amp; df </item>
+
+		Code table:
+			Char	Escape String	Alternatively
+		    ....	.............	.............
+		    <		&lt;			&#60;
+		    >		&gt;			&#62;
+		    '		&apos;			&#39;
+		    "		&quot;			&#34;
+		    &		&amp;			&#38;
+
+	........................................................................
+	Method-2: Surround the commands with CDAT strings
+	........................................................................
+		Example:
+			<![CDATA[
+				ls /home && echo '' && df
+			]]>
+
+	........................................................................
+	Method-3: Put the commands in a script file and call the script path
+	........................................................................
+		Example:
+			<item name="Run a Script File">/media/usb/aaa/myScript.sh</item>
+
+###############################################################################################################
+###  View description (or change-log) of a custom menu														###
+###############################################################################################################
+
+	To show descritpion of your custom menu (or change-log):
+		Method-1 (internal text):
+			<item name="About AJPanel">This is a test panel (v1.0)</item>
+
+		Method-2 (using a file):
+			<item name="About AJPanel">/media/hdd/xx/my_panel.txt</item>
+
+###############################################################################################################
+### Main Menu Setup																							###
+###############################################################################################################
+-->
+<ajp_menu title="Custom Tools" mode="grid" shade="yes" box_gap="40" icon="/usr/lib/enigma2/python/Plugins/Extensions/AJPan/res/ajp.png">
+
+	<!-- ============================================================================================== -->
+	<!-- Open AJPanel Option																			-->
+	<!-- ============================================================================================== -->
+	<submenu title="AJPanel Options (Grid)" info="AJPanel - Enigma2 Tools" width="1600" height="950" mode="grid" shade="yes" bg="#0a222522" icon="ajp.png">
+		<item name="File Manager">ajp_fman</item>
+		<item name="IPTV">ajp_iptv</item>
+		<item name="Movies Browser">ajp_movie</item>
+		<item name="Services/Channels">ajp_chan</item>
+		<item name="Channels Browser">ajp_chanBr</item>
+		<item name="Bouquet Editor">ajp_bouq</item>
+		<item name="PIcons">ajp_picon</item>
+		<item name="EPG">ajp_epg</item>
+		<item name="XML-TV Tools">ajp_xmltv</item>
+		<item name="Terminal">ajp_term</item>
+		<item name="SoftCam">ajp_soft</item>
+		<item name="Plugins">ajp_plugin</item>
+		<item name="Plugins Browser">ajp_plugBr</item>
+		<item name="Backup &amp; Restore">ajp_bakup</item>
+		<item name="Date/Time">ajp_date</item>
+		<item name="Network">ajp_net</item>
+		<item name="Device Info">ajp_info</item>
+		<item name="Check Internet">ajp_inet</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Open AJPanel Option																			-->
+	<!-- ============================================================================================== -->
+	<submenu title="AJPanel Options (List)" info="AJPanel Options (List Mode Menu)" icon="ajp.png" >
+		<item name="File Manager">ajp_fman</item>
+		<separator />
+		<item name="IPTV">ajp_iptv</item>
+		<item name="Movies Browser">ajp_movie</item>
+		<item name="Services/Channels">ajp_chan</item>
+		<item name="Channels Browser">ajp_chanBr</item>
+		<item name="Bouquet Editor">ajp_bouq</item>
+		<item name="PIcons">ajp_picon</item>
+		<item name="EPG">ajp_epg</item>
+		<item name="XML-TV Tools">ajp_xmltv</item>
+		<separator />
+		<item name="Terminal">ajp_term</item>
+		<item name="SoftCam">ajp_soft</item>
+		<item name="Plugins">ajp_plugin</item>
+		<item name="Plugins Browser">ajp_plugBr</item>
+		<item name="Backup &amp; Restore">ajp_bakup</item>
+		<separator />
+		<item name="Date/Time">ajp_date</item>
+		<item name="Network">ajp_net</item>
+		<separator />
+		<item name="Device Info">ajp_info</item>
+		<item name="Check Internet">ajp_inet</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Recursive Submenus (with different size, colors and text alignment)							-->
+	<!-- ============================================================================================== -->
+	<submenu title="Recursive Menus" info="Cascaded menus + Menu Alignment Test" bg="#06006666" title_bg="#06004444" width="800">
+		<submenu title="Test Commands (Center List Items)" align_items="center" bg="#06770077" title_bg="#06aa00aa" width="1100">
+			<!-- ============================================================================================== -->
+			<!-- Testing RTL (Right-to-Left)																	-->
+			<!-- ============================================================================================== -->
+			<submenu title="تجربة Right-to-Left" width="800" height="500" fg="#22ffffff" bg="#22003322" font_size="35" align_items="right" title_fg="#33ffffaa" title_bg="#11003333" title_font_size="50" cursor_fg="#11ff8000" cursor_bg="#11442244">
+				<item name="تثبيت AJPanel - v9.0.0" ask="">wget https://raw.githubusercontent.com/biko-73/AjPanel/main/installer.sh -O - | /bin/sh</item>
+				<item name="تثبيت AJPanel - Latest" ask="">wget https://raw.githubusercontent.com/biko-73/AjPanel/main/installer.sh -O - | /bin/sh</item>
+			</submenu>
+
+			<item name="Using Special Characters (E.g. : &amp;) ... Method-1"> ls /home &amp;&amp; echo '' &amp;&amp; df </item>
+			<item name="Using Special Characters (E.g. : &amp;) ... Method-2">
+				<![CDATA[
+					ls /home && echo '' && df
+				]]>
+			</item>
+		</submenu>
+		<item name="Disk Usage">df</item>
+		<item name="LSOF">lsof</item>
+		<item name="Uptime">uptime</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Simple GRID Submenu (small icons are will stretched to the picture area)						-->
+	<!-- ============================================================================================== -->
+	<submenu title="GRID Menu (mode='grid_3x1')" info="Simple GRID Submenu (will stretch small icons to fit the picture area)" mode="grid_3x3" title_font_size="30">
+		<item name="Disk Usage">df</item>
+		<item name="LSOF">lsof</item>
+		<item name="Uptime">uptime</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Simple GRID Submenu (small icons size is not changed)											-->
+	<!-- ============================================================================================== -->
+	<submenu title="GRID Menu (mode='grid1_3x3')" info="Simple GRID Submenu (will not stretch small icons to fit the picture area)" mode="grid1_3x3">
+		<item name="Disk Usage">df</item>
+		<item name="LSOF">lsof</item>
+		<item name="Uptime">uptime</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Testing Installer-Scripts + Demonstrates Embedded Icon											-->
+	<!-- ============================================================================================== -->
+	<submenu title="Install AJPanel" info="Simple List Menu (with a custom Icon)" line_gap="50" font_size="40" icon="/usr/lib/enigma2/python/Plugins/Extensions/AJPan/res/dnld.png">
+		<item name="AJPanel - v9.0.0" ask="Start Installation ?">wget https://raw.githubusercontent.com/biko-73/AjPanel/main/installer.sh -O - | /bin/sh</item>
+		<item name="AJPanel - Latest" ask="Update AJPanel ?">wget https://raw.githubusercontent.com/biko-73/AjPanel/main/installer.sh -O - | /bin/sh</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Running a script file																			-->
+	<!-- ============================================================================================== -->
+	<item name="Run a Script File" ask="">/media/usb/AAA/Test_Files/long_process_script.sh</item>
+
+	<!-- ============================================================================================== -->
+	<!-- Installing multiple packages (Exmaple: xz and zip)												-->
+	<!-- ============================================================================================== -->
+	<item name="Multiple Install (xz and zip)" ask="Install 2 packaes (xz/zip) ?">opkg install xz zip</item>
+
+	<!-- ============================================================================================== -->
+	<!-- Testing Multiple Commands																		-->
+	<!-- ============================================================================================== -->
+	<item name="Internal Script" info="Simple Script within the Custom Menu XML file">
+		<![CDATA[
+			# ==========================================================
+			echo
+			echo ">>>> [  Testing delayed commands  ] <<<<"
+			SLEEP=0.3
+			ls -d /bin/busybox	; sleep $SLEEP
+			ls -d /bin/cat		; sleep $SLEEP
+			ls -d /bin/chmod	; sleep $SLEEP
+			ls -d /bin/df		; sleep $SLEEP
+			ls -d /bin/echo		; sleep $SLEEP
+			ls -d /bin/ls		; sleep $SLEEP
+			ls -d /bin/ln		; sleep $SLEEP
+			ls -d /bin/mount	; sleep $SLEEP
+			ls -d /bin/sh		; sleep $SLEEP
+			ls -d /bin/uname
+
+			# Check if opkg status file exists
+			echo
+			echo ">>>> [  Checking OPKG Status File  ] <<<<"
+			if test -f /var/lib/opkg/status; then
+				echo "File exists."
+			else
+				echo "File NOT FOUND"
+			fi
+
+			# Check if xz is installed
+			echo
+			echo ">>>> [  Checking 'xz' Package  ] <<<<"
+			if which xz >/dev/null; then echo xz is already installed; else echo 'xz' not installed; fi
+			# ==========================================================
+		]]>
+	</item>
+
+	<!-- ============================================================================================== -->
+	<!-- View a picture																					-->
+	<!-- ============================================================================================== -->
+	<submenu title="Pictures Menu" info="Favourite Pictures" mode="grid_4x4" icon="/usr/lib/enigma2/python/Plugins/Extensions/AJPan/res/pic.png">
+		<item name="View Picture">/usr/share/enigma2/skin_default/testscreen.png</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Movies in a Grid Menu																			-->
+	<!-- ============================================================================================== -->
+	<submenu title="Movies (Grid)" mode="grid_3x3" icon="data:image/png;base64,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" info="Movies (shows posters if exists in same directory)">
+		<item icon="/media/usb/movie/Animation/Bugs_Life_1998.jpg" name="Bugs_Life ">/media/usb/movie/Animation/Bugs_Life_1998.mp4</item>
+		<item name="Jungle Book (1967)">/media/usb/movie/Animation/Jungle_Book_1967.mp4</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Movies in a List Menu  ... jpg/png posters with same names in media dir are show automatically	-->
+	<!-- ============================================================================================== -->
+	<submenu title="Movies (List)" info="Movies (shows posters if exists in same directory)" width="1000" font_size="40" line_gap="100" icon="/usr/lib/enigma2/python/Plugins/Extensions/AJPan/res/mov.png">
+		<item icon="/media/usb/movie/Animation/Bugs_Life_1998.jpg" name="Bugs_Life ">/media/usb/movie/Animation/Bugs_Life_1998.mp4</item>
+		<item name="Jungle Book (1967)">/media/usb/movie/Animation/Jungle_Book_1967.mp4</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Play a Channel 	... If PIcon exists, it will be shown automatically							-->
+	<!-- ============================================================================================== -->
+	<submenu title="Channels Menu" info="Favourite Channels Menu" mode="grid_4x4" icon="/usr/lib/enigma2/python/Plugins/Extensions/AJPan/res/tv.png">
+		<item name="Baby TV" info="Play a channel" >1:0:1:421d:2f44:13E:820000:0:0:0</item>
+		<item name="MiniMini+ HD" info="Play a channel">1_0_1_32e0_190_13E_820000_0_0_0</item>
+		<item name="Sports Connect" info="Play IPTV channel">5001:0:0:0:0:0:0:0:0:0:https%3a//origin3.afxp.telemedia.co.za/PremiumFree/sportsconnect/abr_satellitechannel/satch_sportsconnect_720p/chunks.m3u8:Sports Connect</item>
+	</submenu>
+
+	<!-- ============================================================================================== -->
+	<!-- Open a file or directory in AJPanel File Manager												-->
+	<!-- ============================================================================================== -->
+	<item name="/media/" info="Open the directory &quot;/media/&quot; in File Manager">/media</item>
+	<item info="Locate CCcam.cfg in File Manager" name="Go to skin.xml">/usr/share/enigma2/skin_default/skin.xml</item>
+
+	<!-- ============================================================================================== -->
+	<!-- View Custom Panel version/descriptionchange-log												-->
+	<!-- ============================================================================================== -->
+	<item name="About This Panel">This is a test panel (v1.0)</item>
+
+</ajp_menu>

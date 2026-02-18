@@ -1,0 +1,31 @@
+DreamOS ( enigma2) : هو نظام تشغيلي إنيجما2 لينيكس حصري لأجهزة الإستقبال الفضائي المدمجة المعروفة بالدريم بوكس
+
+Linux (Debian Jessie/Stretch base + dpkg/apt + systemd 2.30 )
+Python 2.7.11 , GCC 5.3.0 , FFmpeg 3.0
+BusyBox 1.24.1,libc-2.23 , Gstreamer 1.6.4 , OpenSSL 1.0.2h
+
+DreamOS receivers ( oe 2.5 ) :
+
+mips = (dm520, dm820, dm7080 )
+
+ARM 32bit = (dm900, dm920 )
+
+"Dreambox Official images build” = https://github.com/dreamlegacy/opendreambox
+
+"Dreambox Official Forum” = https://dreambox.de/board/
+
+"Newnigma2 Official Forum” = https://board.newnigma2.to/wbb4/
+
+"BoxPirates” = https://www.boxpirates.to/index.php?board/21-dreambox/ , https://www.boxpirates.to/index.php?board/863-e2-plugins-f%C3%BCr-die-dreamboxen-oe2-5-oe2-6/ , https://www.boxpirates.to/index.php?board/1781-dreambox-special-merlin-image/ , https://www.wiki.boxpirates.to/index.php?title=Hauptseite
+
+    منتدى I Have a Dreambox:
+
+        المنتدى: https://i-have-a-dreambox.com/
+
+        الويكي: https://www.google.com/search?q=https://wiki.ihad.tv/index.php/Mainpage
+
+    منتدى Tunisia-Sat Enigma2: https://www.tunisia-sat.com/forums/Enigma2/
+
+==========================================================================================
+
+skin = \usr\share\enigma2\ts-MetrixFHD/skin.xml

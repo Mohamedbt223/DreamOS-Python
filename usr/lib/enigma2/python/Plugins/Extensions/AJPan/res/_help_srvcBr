@@ -1,0 +1,19 @@
+#Y#OK#W#	Zap and hide table (change to Review Mode)
+	#G#- If in Review Mode, it returns back to table#W#
+
+#Y#Exit#W#	Exit Bouquet Browser
+	#G#- If in Review Mode, it returns back to table#W#
+
+#Y#Green#W#	Zap and exit table
+#Y#Yellow#W#	Locate current channel in table
+
+#Y#<#W#	Page up
+#Y#>#W#	Page down
+#Y#0#W#	Jump to first/last item
+
+#Y#Up#W#	Move cursor up
+#Y#Down#W#	Move cursor down
+#Y#Left#W#	Move cursor left
+#Y#Right#W#	Move cursor right
+
+#Y#Menu#W#	Bouquet Browser options

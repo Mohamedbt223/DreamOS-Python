@@ -1,0 +1,55 @@
+#Y#Left#W#	Activate Manual Skip Mode + Jumps Backward
+#Y#Right#W#	Activate Manual Skip Mode + Jumps Forward
+
+#Y#<#W#	Jump to beginning
+#Y#>#W#	Jump to end
+
+#Y#<<#W#	Jump Forward (minutes)
+#Y#>>#W#	Jump Backward (minues)
+
+#Y#||#W#	Toggle Play/Pause
+#Y#Play#W#	Toggle Play/Pause
+#Y#Pause#W#	Toggle Play/Pause
+#Y#Stop#W#	Toggle Play/Pause
+
+#Y#Long Stop#W#	Stop Current Service
+#Y#Long Power#W#	Stop Current Service
+
+#Y#PVR#W#	Show System Channel Selection
+#Y#Playlist#W#	Show System Channel Selection
+
+#Y#Long Play#W#	Open "Play with" menu
+
+#Y#OK#W#	#Y#1-#W# Hide/Show the Bar + Start Subtitle #G#(if not in Manual Skip mode)#W#
+	#Y#2-#W# Jump to selected time #G#(if in Manual Skip mode)#W#
+	#Y#3-#W# Show System Channel Selection #G#(if no active service)#W#
+	#Y#Note: you can still use the Bar keys if the Bar is hidden.#W#
+
+#Y#Exit#W#	- Exit Manual Skip mode #G#(if active)#W#
+	- Exit Subtitle #G#(if subtitle is active)#W#
+	- Exit Player Bar #G#(if Bar is shown and not in Manual Skip mode)#W#
+
+#Y#Up-Arrow#W#	Zap Up
+#Y#Down-Arrow#W#	Zap Down
+
+#Y#CH-UP#W#	Zap Down (same as "Page-up" on some RCUs)
+#Y#CH-DOWN#W#	Zap Up (same as "Page-down" on some RCUs)
+
+#Y#Info#W#	Show information/PIcon for the playing stream
+#Y#EPG#W#	Same as "Info" Button (on some RCUs)
+#Y#Help#W#	Same as "Info" Button (e.g. for Vu+)
+
+#Y#TEXT#W#	Shortcut to "Start Subtitle"
+#Y#Audio#W#	Open system "Select audio track"
+#Y#SUBT#W#	Open system "Subtitle selection" window
+
+#Y#Red#W#	"Show Signal Monitor"  #C#or#W#  "Close Bar & Recall Last DVB Service"
+#Y#Green#W#	Refresh ... Resume Portal Channel Streaming (when it freezes)
+#Y#Yellow#W#	Show Catchup TV Programs (if available for current channel)
+#Y#Blue#W#	Show Cut-List (if available in current stream)
+
+#Y#1 - 9#W#	Change Seek/Jump time to 1-9 minutes
+#Y#0#W#	Change Jump time to 10 seconds
+
+#Y#Menu#W#	Player Bar Menu
+#Y#Menu > Menu#W#	More Player Options

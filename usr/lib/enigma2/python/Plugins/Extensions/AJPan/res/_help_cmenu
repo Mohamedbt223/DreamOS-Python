@@ -1,0 +1,18 @@
+
+The #Y#Custom Menu#W# is a menu that you can create to suit your requiremens.
+#G#
+When available, the menu can be accessed from:
+- Main Page menu.
+- System Extensions Menu. A Hotkey can be assigned from System Hotkey Settings.
+
+#Y#How:#W#
+  1- Start the menu (from Main Page menu or from Extensions menu).
+  2- The panel will ask to copy the sample files to your backup directory and will start the menu.
+  3- Customize the file #Gn#ajpanel_menu.xml#W# to your needs (it includes description and many samples).
+
+#Y#Main Features:#W#
+- Recursive submenus can be added (unlimited recursion depth).
+- You can customize your favourite AJPanel options into a submenu.
+- You can direct a command, multiple commands and script files to the Terminal.
+- The menu can be accessed from Main Page menu and from System Extensions Menu.
+- A Hotkey can be assigned from System Hotkey Settings for easy access to the menu.

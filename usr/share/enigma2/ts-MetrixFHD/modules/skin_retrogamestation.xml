@@ -1,0 +1,32 @@
+<skin>
+    <!-- RetroGameStation -->
+    <screen name="RetroGameStation" title="Retro GameStation" position="0,0" size="1920,1080" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget source="list" render="Listbox" position="120,190" size="1200,600" itemHeight="75" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="metrixBackground" transparent="1" >
+            <convert type="TemplatedMultiContent">
+                {"templates":
+                {"default": (75,[
+                MultiContentEntryText(pos=(180,8),size=(930,38),font=0,text=2),# index 2 is the emulator description (real console name)
+                MultiContentEntryText(pos=(180,39),size=(510,25),font=1,text=1),# index 1 is the emualtor name
+                MultiContentEntryPixmapAlphaTest(pos=(8,8),size=(150,60),png=5),# index 5 is the icon
+                ]),
+                },
+                "fonts": [gFont("Regular",30),gFont("Regular",21)],
+                "itemHeight": 75
+                }
+            </convert>
+        </widget>
+        <panel name="c-nrg" />
+        <ePixmap alphatest="blend" pixmap="ts-MetrixFHD/menu/joystick.png" position="1365,382" size="384,384" transparent="1" zPosition="2" />
+    </screen>
+
+    <screen name="RomBrowser" position="0,0" size="1920,1080" title="Emulator Browser" flags="wfNoBorder" backgroundColor="transparent">
+        <panel name="screenpanel_default" />
+        <widget source="Title" render="Label" position="120,75" size="1200,100" font="SetrixHD;60" foregroundColor="metrixForeground" backgroundColor="metrixBackground" transparent="1" />
+        <widget name="filelist" position="120,190" size="1200,630" zPosition="3" itemHeight="45" scrollbarMode="showOnDemand" enableWrapAround="1" transparent="1" />
+        <ePixmap position="1380,350" size="384,384" zPosition="2" pixmap="ts-MetrixFHD/tsimage/menu/filesexplorer.png" transparent="1" alphatest="blend" />
+        <panel name="bc-nrg" />
+</screen>
+
+</skin>

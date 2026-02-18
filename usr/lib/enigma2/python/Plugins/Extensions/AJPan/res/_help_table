@@ -1,0 +1,25 @@
+#Y#<#W#	Find Previous
+#Y#>#W#	Find Next
+
+#Y#Up#W#	Cursor Up
+#Y#Down#W#	Cursor Down
+
+#Y#Left#W#	Page Up
+#Y#Right#W#	Page Down
+
+#Y#HOME#W#	Go to first row
+#Y#END#W#	Go to last row
+
+#Y#CH-UP#W#	Go to first row
+#Y#CH-DOWN#W#	Go to last row
+
+#Y#PAGE-UP#W#	Go to first row
+#Y#PAGE-DOWN#W#	Go to last row
+
+#Y#OK#W#	Info/Zap/Select (depends on table)
+
+#Y#Info#W#	Information about selected row
+
+#Y#Menu#W#	Table Options
+
+#Y#Exit#W#	Exit (on most table)
